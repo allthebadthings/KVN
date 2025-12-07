@@ -1,0 +1,86 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "8.0")
+  (uuid "c3d4e5f6-a7b8-9012-cdef-123456789012")
+  (paper "A4")
+  (title_block
+    (title "ESP32-C3 Scout - Battery Powered Infiltrator")
+    (date "2025-12-06")
+    (rev "1.0")
+    (company "Vanguard AI System")
+  )
+
+  (lib_symbols
+    (symbol "power:+BATT"
+      (power)
+      (pin_names (offset 0))
+      (property "Reference" "#PWR" (id 0) (at 0 0 0))
+      (property "Value" "+BATT" (id 1) (at 0 3.81 0))
+    )
+    (symbol "power:+3V3"
+      (power)
+      (pin_names (offset 0))
+      (property "Reference" "#PWR" (id 0) (at 0 0 0))
+      (property "Value" "+3V3" (id 1) (at 0 3.81 0))
+    )
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (property "Reference" "#PWR" (id 0) (at 0 0 0))
+      (property "Value" "GND" (id 1) (at 0 -3.81 0))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+
+  (text "ESP32-C3 SCOUT - THE INFILTRATOR\n\nMission: Invisibility & Efficiency\n- Battery powered (Li-Ion 3.7-4.2V)\n- Ultra-low power (deep sleep)\n- Compact (22mm max width)\n- Hallway/junction box deployment\n\nKey Features:\n- Battery monitoring via ADC\n- Sensor power switching (MOSFET)\n- Wake-up on motion\n- Limited GPIO (precision required)"
+    (at 180 40 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-notes-001")
+  )
+
+  (text "BATTERY MANAGEMENT\n\nLi-Ion Battery (3.7-4.2V)\n  ↓\nHT7333 Low-IQ LDO\n  Input:  10µF\n  Output: 10µF → 3.3V\n  Quiescent: <4µA (critical for battery life)\n  ↓\nESP32-C3 + Sensors\n\nBattery Voltage Monitor:\nV_BAT → 100kΩ → Junction → 100kΩ → GND\n              ↓\n         GPIO3 (ADC)\n         \nFormula: V_actual = V_adc × 2\n(Voltage divider: 50% scaling)"
+    (at 20 40 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-power-001")
+  )
+
+  (text "PIN ASSIGNMENT - ESP32-C3\n\nPower Control:\nGPIO8 → 2N7000 Gate (Sensor power switch)\n\nUART Radar (ONE sensor max):\nGPIO6 → RX (← Radar TX)\nGPIO7 → TX (→ Radar RX)\n\nI2C Sensors (Unlimited chaining):\nGPIO4 → SDA (+ 4.7kΩ → 3.3V)\nGPIO5 → SCL (+ 4.7kΩ → 3.3V)\n\nDigital Input:\nGPIO3 → Reed Switch / PIR Motion\n        (Also used for battery ADC)\n\nBoot Pin:\nGPIO2 → AVOID / LED only\n        (Keep clear for boot stability)"
+    (at 20 100 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-pinout-001")
+  )
+
+  (text "SENSOR POWER SWITCHING\n\nProblem: Radar drains battery during deep sleep\nSolution: MOSFET switch on GND line\n\nCircuit:\n┌────────┐\n│ Sensor │\n│  VCC   │ ← 3.3V Always On\n│        │\n│  GND   │ ← Switchable\n└───┬────┘\n    │\n [2N7000 Drain]\n    │\n [2N7000 Source] ← GND\n    │\nGate ← GPIO8\n\nOperation:\n- GPIO8 HIGH → MOSFET ON → Sensor powered\n- GPIO8 LOW  → MOSFET OFF → Sensor off (saves power)\n- C3 can sleep, cutting all sensor power"
+    (at 100 100 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-mosfet-001")
+  )
+
+  (text "CONNECTORS\n\nJ1 - Li-Ion Battery:\n  1: BAT+ (3.7-4.2V)\n  2: BAT-  (GND)\n\nJ2 - Radar (LD2420 or RD03):\n  1: 3.3V\n  2: GND (via MOSFET switch)\n  3: TX → GPIO6 (C3 RX)\n  4: RX → GPIO7 (C3 TX)\n\nJ3 - I2C Sensors:\n  1: 3.3V\n  2: GND\n  3: SDA → GPIO4\n  4: SCL → GPIO5\n\nJ4 - Door/Window Sensor:\n  1: GPIO3\n  2: GND\n  (Reed switch: NO contact)"
+    (at 180 100 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-connectors-001")
+  )
+
+  (text "COMPONENT VALUES\n\nPower Management:\n- U1: HT7333 LDO (3.3V, Low-IQ <4µA)\n- C1: 10µF Ceramic (LDO input)\n- C2: 10µF Ceramic (LDO output)\n- BT1: Li-Ion 18650 or LiPo cell\n\nBattery Monitor:\n- R1, R2: 100kΩ (Voltage divider)\n  (High resistance = low leakage)\n\nSensor Power Switch:\n- Q1: 2N7000 N-Channel MOSFET\n  (Low Rds(on), logic-level gate)\n\nI2C Pull-ups:\n- R3, R4: 4.7kΩ (SDA, SCL)\n\nDecoupling:\n- C3-C5: 100nF Ceramic"
+    (at 20 160 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-components-001")
+  )
+
+  (text "⚠️ CRITICAL NOTES\n\n1. LOW-QUIESCENT LDO MANDATORY:\n   - Standard LDOs drain battery even in sleep\n   - HT7333 or equivalent (<10µA quiescent)\n   - DO NOT use standard AMS1117/LM1117\n   \n2. GPIO LIMITATIONS:\n   - C3 has VERY limited GPIOs\n   - Can run ONE UART sensor OR I2C chain\n   - Cannot run multiple UART sensors\n   \n3. BATTERY MONITORING:\n   - 100kΩ resistors minimize leakage\n   - Lower values drain battery faster\n   - GPIO3 reads 50% of actual voltage\n   \n4. MOSFET PLACEMENT:\n   - Switch on GROUND side (low-side switch)\n   - Gate resistor not shown (10kΩ recommended)\n   - Prevents floating gate during C3 reset\n   \n5. DEEP SLEEP WAKE-UP:\n   - Route radar OUT pin to RTC GPIO\n   - C3 wakes only when target detected\n   - Critical for battery life\n   \n6. BOOT PIN (GPIO2):\n   - Keep clear for boot stability\n   - Can use for LED indicator only\n   - Do NOT use for critical sensors\n   \n7. PHYSICAL SIZE:\n   - Max width: 22mm (stick form)\n   - Fits standard junction boxes\n   - 2-layer PCB acceptable (cost savings)"
+    (at 100 160 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-warnings-001")
+  )
+
+  (text "DEEP SLEEP STRATEGY\n\nPower Consumption Targets:\n- Active (radar scanning): ~80mA\n- Light sleep: ~800µA\n- Deep sleep: <10µA\n\nBattery Life Calculation:\n18650 cell (3000mAh):\n- Continuous active: ~37 hours\n- 95% deep sleep: ~3-6 months\n\nWake Sources:\n- Radar detection (via RTC GPIO)\n- Timer wake (hourly check-in)\n- External interrupt (reed switch)"
+    (at 20 220 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-sleep-001")
+  )
+)

@@ -1,0 +1,74 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "8.0")
+  (uuid "a1b2c3d4-e5f6-7890-abcd-ef1234567890")
+  (paper "A4")
+  (title_block
+    (title "ESP32-P4 Hub - AI Coordinator System")
+    (date "2025-12-06")
+    (rev "1.0")
+    (company "Vanguard AI System")
+  )
+
+  (lib_symbols
+    (symbol "power:+5V"
+      (power)
+      (pin_names (offset 0))
+      (property "Reference" "#PWR" (id 0) (at 0 0 0))
+      (property "Value" "+5V" (id 1) (at 0 3.81 0))
+    )
+    (symbol "power:+3V3"
+      (power)
+      (pin_names (offset 0))
+      (property "Reference" "#PWR" (id 0) (at 0 0 0))
+      (property "Value" "+3V3" (id 1) (at 0 3.81 0))
+    )
+    (symbol "power:GND"
+      (power)
+      (pin_names (offset 0))
+      (property "Reference" "#PWR" (id 0) (at 0 0 0))
+      (property "Value" "GND" (id 1) (at 0 -3.81 0))
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+
+  (text "ESP32-P4 HUB - THE BRAIN\n\nPower Section:\n- 5V from USB-C for Radars\n- 3.3V from LDO for MCU and logic\n\nUART Connections:\n- GPIO16/17: LD2420 #1 (Bed)\n- GPIO18/19: LD2420 #2 (Door)  \n- GPIO26: RD03-EG521 (Zone)\n- GPIO33: RD03-DG521 (Intent)\n\nI2C Bus (GPIO21/22):\n- BH1750 Light Sensor\n- Gravity AI #1 (0x62)\n- Gravity AI #2 (0x63)\n\nI2S Audio (GPIO25/32/34):\n- INMP441 Microphone\n\nCRITICAL NOTES:\n- All radars require 5V power\n- I2C pull-ups: 4.7kΩ to 3.3V\n- Decoupling: 100nF at each sensor\n- Thermal: Heatsink required on P4"
+    (at 180 40 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-notes-001")
+  )
+
+  (text "POWER REGULATION\n\nUSB-C → TVS Diode → GND (ESD Protection)\nUSB-C → 470µF → 5V Rail (Radar Power)\nUSB-C → LDO (>800mA) → 3.3V Rail\n  LDO Input:  10µF + 100nF\n  LDO Output: 10µF + 100nF"
+    (at 20 40 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-power-001")
+  )
+
+  (text "SENSOR CONNECTORS\n\nJ1 - LD2420 #1 (Bed Radar):\n  1: 5V\n  2: GND\n  3: TX → GPIO16 (RX)\n  4: RX → GPIO17 (TX)\n\nJ2 - LD2420 #2 (Door Radar):\n  1: 5V\n  2: GND\n  3: TX → GPIO18 (RX)\n  4: RX → GPIO19 (TX)\n\nJ3 - RD03-EG521:\n  1: 5V\n  2: GND\n  3: TX → GPIO26 (RX)\n\nJ4 - RD03-DG521:\n  1: 5V\n  2: GND\n  3: RX → GPIO33 (TX)\n\nJ5 - I2C Bus (Light + Gravity AI):\n  1: VCC (3.3V or 5V)\n  2: GND\n  3: SDA → GPIO21 (+ 4.7kΩ pullup)\n  4: SCL → GPIO22 (+ 4.7kΩ pullup)\n\nJ6 - INMP441 Microphone:\n  1: 3.3V\n  2: GND\n  3: WS → GPIO25\n  4: SCK → GPIO32\n  5: SD → GPIO34\n  6: L/R → GND"
+    (at 20 100 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-connectors-001")
+  )
+
+  (text "PIN ASSIGNMENT SUMMARY - ESP32-P4\n\nGPIO16 (UART1_RX) ← LD2420_1_TX (Bed)\nGPIO17 (UART1_TX) → LD2420_1_RX (Bed)\nGPIO18 (UART2_RX) ← LD2420_2_TX (Door)\nGPIO19 (UART2_TX) → LD2420_2_RX (Door)\nGPIO21 (I2C_SDA)  ↔ All I2C Devices + 4.7kΩ → 3.3V\nGPIO22 (I2C_SCL)  ↔ All I2C Devices + 4.7kΩ → 3.3V\nGPIO25 (I2S_WS)   → Microphone WS\nGPIO26 (UART3_RX) ← RD03_EG521_TX (Zone)\nGPIO32 (I2S_SCK)  → Microphone SCK\nGPIO33 (UART4_TX) → RD03_DG521_RX (Intent)\nGPIO34 (I2S_SD)   ← Microphone SD\nGPIO35 (INT)      ← Gravity_AI_2_Interrupt"
+    (at 100 100 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-pinout-001")
+  )
+
+  (text "COMPONENT VALUES\n\nPower:\n- C1: 470µF Electrolytic (5V rail smoothing)\n- C2, C3: 10µF Ceramic (LDO input/output)\n- C4, C5: 100nF Ceramic (LDO filtering)\n- U1: LDO Regulator (3.3V, >800mA)\n- D1: TVS Diode (ESD protection)\n\nI2C Pull-ups:\n- R1, R2: 4.7kΩ (SDA, SCL)\n\nDecoupling (one per sensor):\n- C6-C12: 100nF Ceramic\n\nThermal:\n- Heatsink for ESP32-P4 (mandatory)"
+    (at 180 100 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-components-001")
+  )
+
+  (text "⚠️ CRITICAL ASSEMBLY NOTES\n\n1. 5V MANDATE: Radars (LD2420, RD03) and Gravity AI MUST use 5V rail\n   - Will fail/malfunction on 3.3V\n   \n2. I2C ADDRESSES: Set Gravity AI boards to different addresses\n   - Gravity AI #1: 0x62\n   - Gravity AI #2: 0x63\n   - Use hardware jumpers on boards\n   \n3. CONTINUITY TEST: Before power-on, check VCC→GND with multimeter\n   - Should NOT beep (no short)\n   \n4. THERMAL: Apply heatsink to P4 before first power-on\n   - 400MHz dual-core runs hot\n   \n5. POWER BUDGET: Multiple 5V sensors may exceed USB current (500mA)\n   - Use external 5V supply if system unstable\n   \n6. SIGNAL INTEGRITY: Keep I2S traces short\n   - Audio susceptible to digital noise"
+    (at 20 160 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "text-warnings-001")
+  )
+)

@@ -1,0 +1,246 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "b2c3d4e5-f6a7-8901-bcde-f12345678901")
+	(paper "A4")
+	(title_block
+		(title "ESP32-S3 Watchtower - Display + Radar Node")
+		(date "2025-12-06")
+		(rev "1.0")
+		(company "Vanguard AI System")
+	)
+	(lib_symbols
+		(symbol "power:+3V3"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+5V"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "⚠️ CRITICAL NOTES\n\n1. UART PIN SELECTION:\n   - Use HIGH GPIOs (43, 44) for radar\n   - Avoids I2S conflict on default pins\n   \n2. DISPLAY NOISE:\n   - Ferrite bead on backlight power MANDATORY\n   - Prevents display noise in radar data\n   - Use \"teardrop\" pads on FPC connector\n   \n3. POWER STABILITY:\n   - Radar requires clean 5V\n   - Do NOT daisy-chain through 3.3V regulator\n   - Direct 5V trace from power input\n   \n4. AVOID PIN CONFLICT:\n   - Do NOT add camera to this config\n   - Do NOT add large 7\" display\n   - S3 has limited GPIOs - one war at a time\n   \n5. PCB LAYOUT:\n   - Keep display traces away from antenna\n   - No copper under antenna area\n   - Display connector on board edge"
+		(exclude_from_sim no)
+		(at 20 140 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "411e0016-d613-4f0e-aada-dc9287cb1636")
+	)
+	(text "POWER SECTION\n\n5V Input → LDO → 3.3V\n  Input filtering:  10µF + 100nF\n  Output filtering: 10µF + 100nF\n\nRadar Power: 5V direct\nDisplay Backlight: 5V via Ferrite Bead\n  (Reduces noise coupling to radar)"
+		(exclude_from_sim no)
+		(at 20 40 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "66aa3cfd-d5b3-465b-ac9d-1c2101282170")
+	)
+	(text "COMPONENT VALUES\n\nPower:\n- U1: LDO Regulator (3.3V, >500mA)\n- C1, C2: 10µF Ceramic (LDO input)\n- C3, C4: 10µF + 100nF (LDO output)\n- FB1: Ferrite Bead (Display backlight noise filter)\n\nI2C Pull-ups (if using I2C):\n- R1, R2: 4.7kΩ (SDA, SCL)\n\nDecoupling:\n- C5-C7: 100nF Ceramic (one per device)"
+		(exclude_from_sim no)
+		(at 180 90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7466dc77-2d5c-41ab-b459-7ea372ff0b0a")
+	)
+	(text "PIN ASSIGNMENT - ESP32-S3\n\nSPI Display (ILI9341/ILI9488):\nGPIO4  → CS   (Chip Select)\nGPIO5  → DC   (Data/Command)\nGPIO6  → RST  (Reset)\nGPIO7  → MOSI (Data)\nGPIO8  → CLK  (Clock)\n5V + Ferrite → LED+ (Backlight)\n\nUART Radar (RD03-DG521):\nGPIO43 → TX (High GPIO avoids I2S conflict)\nGPIO44 → RX (High GPIO avoids I2S conflict)\n\nI2C Sensors (Optional):\nGPIO9  → SDA (+ 4.7kΩ → 3.3V)\nGPIO10 → SCL (+ 4.7kΩ → 3.3V)"
+		(exclude_from_sim no)
+		(at 20 90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "98b61804-2470-4e6a-b929-92cf688ad29f")
+	)
+	(text "ESP32-S3 WATCHTOWER - DISPLAY + RADAR\n\nConfiguration: Dual-front war\n- Visual output: TFT Display (SPI)\n- Sensor input: Radar (UART)\n\nDO NOT combine camera + large display on same S3\n- Pin conflict - insufficient GPIOs\n\nBest deployment:\n- Living rooms\n- Offices\n- Control stations"
+		(exclude_from_sim no)
+		(at 180 40 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fa4df4de-6be0-4ed2-ada4-eeb0d0000133")
+	)
+	(text "CONNECTORS\n\nJ1 - TFT Display (SPI):\n  1: VCC (3.3V or 5V - check display)\n  2: GND\n  3: CS   ← GPIO4\n  4: RST  ← GPIO6\n  5: DC   ← GPIO5\n  6: MOSI ← GPIO7\n  7: CLK  ← GPIO8\n  8: LED+ ← 5V via Ferrite Bead\n\nJ2 - RD03 Radar:\n  1: 5V\n  2: GND\n  3: TX → GPIO44 (S3 RX)\n  4: RX → GPIO43 (S3 TX)\n\nJ3 - I2C Expansion (Optional):\n  1: 3.3V\n  2: GND\n  3: SDA → GPIO9\n  4: SCL → GPIO10"
+		(exclude_from_sim no)
+		(at 100 90 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fc4d8568-9aff-41a0-81e6-6d69ecec192a")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
