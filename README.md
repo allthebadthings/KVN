@@ -1,6 +1,6 @@
 # Kinetic Vector Network (KVN)
 
-**Smart Home AI System with 17 ESP32 Devices**
+**Smart Home AI System with ESP32 Devices**
 
 An advanced smart home system using ESP32 microcontrollers with AI-powered automation and real-time monitoring.
 
