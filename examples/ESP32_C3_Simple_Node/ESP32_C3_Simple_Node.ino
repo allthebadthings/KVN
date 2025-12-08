@@ -1,12 +1,11 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
+#include "c3_config.h"
 
 const char* WIFI_SSID = "guy-fi";
-const char* WIFI_PASSWORD = "";
-const char* MQTT_HOST = "192.168.86.38";
+const char* WIFI_PASSWORD = "your-password";
+const char* MQTT_HOST = "192.168.1.100"; // P4 Hub IP
 const uint16_t MQTT_PORT = 1883;
-
-#include "c3_config.h"
 
 WiFiClient espClient;
 PubSubClient mqtt(espClient);
@@ -59,7 +58,16 @@ void publishStatus() {
   mqtt.publish(topic.c_str(), payload.c_str(), true);
 }
 
+// Deep Sleep Helper (Call this when battery is low or after task completion)
+void enterDeepSleep(uint64_t sleepTimeUs) {
+  Serial.println("Entering deep sleep...");
+  mqtt.disconnect();
+  esp_deep_sleep_enable_timer_wakeup(sleepTimeUs);
+  esp_deep_sleep_start();
+}
+
 void setup() {
+  Serial.begin(115200);
   pinMode(SENSOR_POWER_PIN, OUTPUT);
   digitalWrite(SENSOR_POWER_PIN, HIGH);
   pinMode(BATTERY_ADC_PIN, INPUT);
