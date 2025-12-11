@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 class WebSocketService {
-  final String hubUrl = 'ws://192.168.1.100/ws';
+  static const String _defaultHub = 'ws://192.168.1.100/ws';
+  static const String hubUrl = String.fromEnvironment('HUB_URL', defaultValue: _defaultHub);
   WebSocketChannel? _channel;
   final _sensor = StreamController<Map<String, dynamic>>.broadcast();
   final _status = StreamController<bool>.broadcast();

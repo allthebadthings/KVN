@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map For KVN_LDR
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+KVN_LDR	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+readRaw	KEYWORD2
+readSmoothed	KEYWORD2
+getBrightness	KEYWORD2
+getLightLevel	KEYWORD2
+getLux	KEYWORD2
+isDay	KEYWORD2
+hasChanged	KEYWORD2
+toJSON	KEYWORD2
+setCalibration	KEYWORD2
+autoCalibrate	KEYWORD2
+printDebug	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+LDR_LEVEL_DARK	LITERAL1
+LDR_LEVEL_DIM	LITERAL1
+LDR_LEVEL_NORMAL	LITERAL1
+LDR_LEVEL_BRIGHT	LITERAL1
+LDR_LEVEL_VERY_BRIGHT	LITERAL1

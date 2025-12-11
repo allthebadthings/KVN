@@ -164,7 +164,7 @@ cd psychic-potato
 ### Success!
 
 You now have the repository cloned on your computer! You can:
-- Explore the files: `ls` (macOS/Linux) or `dir` (Windows)
+- Explore the files: `dir`
 - Start Claude in the project directory: `claude`
 - Make changes and commit them with Git
 
@@ -207,22 +207,20 @@ This means your SSH key isn't set up correctly with GitHub:
 ### "command not found" errors
 
 **If `git` is not found:**
-- Windows: Restart Command Prompt after installation
-- macOS/Linux: Make sure installation completed successfully
+- Restart Command Prompt after installation
+- Make sure the installation completed successfully
 
 **If `claude` is not found:**
 - Make sure npm installation completed without errors
-- Try closing and reopening your terminal
-- Check if npm global bin is in your PATH
+- Try closing and reopening Command Prompt
+- If still not working, try running Command Prompt as Administrator and reinstalling
 
 ### Permission errors during installation
 
-**Linux/macOS:**
-- You might need to use `sudo` for global npm installs
-- Or configure npm to install globally without sudo
-
-**Windows:**
-- Run Command Prompt as Administrator
+If you get permission errors when installing Claude CLI:
+- Close Command Prompt
+- Right-click Command Prompt and choose "Run as Administrator"
+- Try the installation again
 
 ## Need More Help?
 

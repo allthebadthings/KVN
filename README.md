@@ -11,6 +11,7 @@ An advanced smart home system using ESP32 microcontrollers with AI-powered autom
 - **1× ESP32-P4 Hub** - Central processing hub ("The Brain")
 - **10× ESP32-S3 Nodes** - Advanced sensors, cameras, displays
 - **6× ESP32-C3 Scouts** - Battery-powered sensors for hallways/windows
+- **1× ESP32-C6 MQTT Relay** - Dedicated message relay with status display
 - **AI Integration** - Anthropic Claude / OpenAI / Google Gemini
 - **Communication** - MQTT + WebSocket real-time protocol
 - **Interfaces** - Web Dashboard + Flutter Mobile App (Vanguard)
@@ -27,6 +28,7 @@ KVN_Coordinator_System/
 ├── docs/                                   # Documentation
 │   ├── AI_COORDINATOR_ROADMAP.md           # Master roadmap
 │   ├── ESP32_PINOUTS_REFERENCE.md          # Hardware pinouts
+│   ├── ESP32_C6_MQTT_RELAY.md              # MQTT Relay documentation
 │   ├── FIRMWARE_FILE_STRUCTURE.md          # Firmware organization
 │   ├── FIRMWARE_QUICKSTART.md              # Quick start guide
 │   ├── KICAD_SETUP_GUIDE.md                # PCB design guide
@@ -48,6 +50,7 @@ KVN_Coordinator_System/
 ├── examples/                               # Firmware Examples
 │   ├── Complete_Sensor_System/             # ESP32-P4 firmware
 │   ├── ESP32_C3_Simple_Node/               # ESP32-C3 firmware
+│   ├── ESP32_C6_MQTT_Relay/                # ESP32-C6 MQTT relay
 │   └── Utilities/                          # Utility sketches
 │
 ├── vanguard_app/                           # Flutter Mobile App
@@ -111,8 +114,9 @@ See `docs/NETWORK_CONFIG_GUIDE.md` for:
 ## Key Features
 
 ### Hardware
-- 17 networked ESP32 devices
+- 18 networked ESP32 devices (P4, S3, C3, C6)
 - Cameras, displays, mmWave radars, environmental sensors
+- Dedicated MQTT relay with real-time status monitoring
 - Low-power battery operation for scouts
 - Custom PCB designs
 
@@ -141,6 +145,7 @@ For complete documentation, API references, and development guides, see:
 - [ESP32-P4](https://www.espressif.com/en/products/socs/esp32-p4)
 - [ESP32-S3](https://www.espressif.com/en/products/socs/esp32-s3)
 - [ESP32-C3](https://www.espressif.com/en/products/socs/esp32-c3)
+- [ESP32-C6](https://www.espressif.com/en/products/socs/esp32-c6)
 
 ### Development Tools
 - Arduino IDE with ESP32 board support

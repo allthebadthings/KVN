@@ -5,7 +5,7 @@ const { createApp, reactive } = PetiteVue;
 
 // Dashboard State
 const state = reactive({
-    demoMode: false,
+    demoMode: true,
 
     // Connection
     isConnected: false,
