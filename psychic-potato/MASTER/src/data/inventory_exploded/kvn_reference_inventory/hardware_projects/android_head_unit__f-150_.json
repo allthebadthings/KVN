@@ -1,0 +1,19 @@
+{
+  "name": "Android Head Unit (F-150)",
+  "type": "hardware",
+  "vehicle": "2001 Ford F-150",
+  "unit": "Pyniro 7\" (SKU: CLP-18)",
+  "features": [
+    "Android OS with app sideloading",
+    "Developer options enabled",
+    "CarPlay/Android Auto compatible",
+    "Wire harness adapters documented"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 7.927450257489186
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "fa9eff1f01e9a16dc7e7d2ca12204cd0"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "KVN Ltd (Umbrella)",
+  "type": "business_structure",
+  "subsidiaries": [
+    "KDS (Kevin Daryl Systems) - ESP32 integration",
+    "Sister's jewelry business",
+    "KVN - Kinetic Vector Network"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 33.787266037530486
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "9bf2b198a28c0cfa5583ad84cc13e334"
+}

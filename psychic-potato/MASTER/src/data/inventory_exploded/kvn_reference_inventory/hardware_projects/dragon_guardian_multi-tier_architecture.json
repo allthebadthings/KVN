@@ -1,0 +1,17 @@
+{
+  "name": "Dragon Guardian Multi-Tier Architecture",
+  "type": "architecture",
+  "structure": [
+    "Tier 1 (Endpoints): ESP32-C3, S3, P4+C6 as mesh sensors",
+    "Tier 2 (Controllers): RP2040 Pico as intermediate hubs",
+    "Tier 3 (Brains): Jetson Nano/Orin for AI processing",
+    "Tier 4 (Central): Home Assistant on Raspberry Pi"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 57.02021209222043
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "bf282ae71db44f5d239fdd92339a20fa"
+}

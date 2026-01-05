@@ -1,0 +1,24 @@
+{
+  "name": "Jetson Orin Nano Setup",
+  "type": "setup",
+  "os": "JetPack 6.0/6.2",
+  "components": [
+    "CUDA 12.6.68",
+    "TensorRT 10.3.0.30",
+    "OpenCV (with CUDA rebuild needed)",
+    "Docker",
+    "Ollama (for local AI)"
+  ],
+  "storage": "Migrated to NVMe",
+  "models": [
+    "Mistral",
+    "Llama2"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 66.62982067321448
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "c31e31344052d9bf2297658e766a293f"
+}

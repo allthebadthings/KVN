@@ -1,0 +1,18 @@
+{
+  "name": "KVN - Kinetic Vector Network",
+  "type": "brand",
+  "domain": "kvn.ltd",
+  "concept": "Empathic network - AI that cares",
+  "sub_brands": [
+    "KVN Core",
+    "KVN Home"
+  ],
+  "notes": "Dragon references retired, now using Draco/KVN",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 347.5241369963584
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "39ad707a7624b7118111f0b28a4043a2"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "ESP32-CAM-Node-Display Config",
+  "type": "device_config",
+  "board": "GOOUUU ESP32-S3-CAM",
+  "sensors": [
+    "HLK-LD2420 presence sensor (UART)",
+    "ALS-PT19 light sensor (ADC)",
+    "AHT10 temperature/humidity (I2C)",
+    "OV2640/OV5640 camera"
+  ],
+  "display": "ILI9341 touchscreen (optional)",
+  "features": [
+    "Presence detection with moving/still targets",
+    "Environmental monitoring",
+    "Camera streaming",
+    "Status display"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 142.57698259480145
+  },
+  "last_updated": "2026-01-03T11:10:30.177Z",
+  "checksum": "652681acf5025624948c504682e348ef"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ESP32 Device Tracker",
+  "type": "project",
+  "tech": "HTML",
+  "file": "esp32-device-tracker.html",
+  "features": [
+    "Add/categorize devices (Camera, Sensor, Light, etc.)",
+    "Anthropic API integration for doc generation",
+    "Auto-generate wiring diagrams per device",
+    "GPIO pin assignments",
+    "ESPHome YAML config generation",
+    "Component lists"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 211.4569800661162
+  },
+  "last_updated": "2026-01-03T11:10:30.176Z",
+  "checksum": "75af31ce696910b8939705fa5659cb10"
+}

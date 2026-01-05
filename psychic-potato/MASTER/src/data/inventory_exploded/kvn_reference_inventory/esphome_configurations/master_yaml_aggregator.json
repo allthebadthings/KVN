@@ -1,0 +1,20 @@
+{
+  "name": "Master YAML Aggregator",
+  "type": "config",
+  "file": "master_config.yaml",
+  "purpose": "Shared config includes for all devices",
+  "contains": [
+    "WiFi secrets management",
+    "Multiple network fallbacks",
+    "API encryption keys",
+    "OTA passwords",
+    "Common boilerplate"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 131.95476318630625
+  },
+  "last_updated": "2026-01-03T11:10:30.177Z",
+  "checksum": "855f6f78c3ace9e387dc41d8bc49a51f"
+}

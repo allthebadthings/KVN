@@ -1,0 +1,20 @@
+{
+  "name": "Business Tracker Notebook",
+  "type": "project",
+  "tech": "Jupyter",
+  "file": "business_tracker.ipynb",
+  "features": [
+    "Clients tracking",
+    "Devices/deployments",
+    "Projects with revenue tracking",
+    "Tasks with due dates",
+    "Payment status"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 26.795175762876173
+  },
+  "last_updated": "2026-01-03T11:10:30.176Z",
+  "checksum": "fcfea4172e96757793275679efde5996"
+}

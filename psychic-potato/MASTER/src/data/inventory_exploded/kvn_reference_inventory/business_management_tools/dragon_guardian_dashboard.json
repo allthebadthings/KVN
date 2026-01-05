@@ -1,0 +1,20 @@
+{
+  "name": "Dragon Guardian Dashboard",
+  "type": "project",
+  "tech": "HTML/React",
+  "description": "Unified client deployment management",
+  "features": [
+    "Client management (individual homes)",
+    "Device tracking pipeline: In Stock → Configured → Deployed → Active",
+    "Mobile-friendly responsive design",
+    "Auto-saves to localStorage",
+    "Quick stats dashboard"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 197.55779261043975
+  },
+  "last_updated": "2026-01-03T11:10:30.176Z",
+  "checksum": "122d4ef8ae15baaf2e6631d289b80c43"
+}

@@ -1,0 +1,268 @@
+{
+  "timestamp": "2026-01-03T13:45:20.850Z",
+  "summary": {
+    "total": 43,
+    "valid": 43,
+    "invalid": 0
+  },
+  "details": [
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/branding___business/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/branding___business/kvn_-_kinetic_vector_network.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/branding___business/kvn_ltd__umbrella_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/branding___business/market_entry_strategy.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/business_management_tools/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/business_management_tools/business_tracker_notebook.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/business_management_tools/device_integration_master_notebook.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/business_management_tools/dragon_guardian_dashboard.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/business_management_tools/esp32_device_tracker.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/business_management_tools/inventory_sync_server.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/esphome_configurations/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/esphome_configurations/crowpanel_7_0__display_config.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/esphome_configurations/esp32-cam-node-display_config.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/esphome_configurations/esp32-s3-cam_complete_config.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/esphome_configurations/master_yaml_aggregator.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/esphome_configurations/secrets_yaml_template.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/file_locations/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/file_locations/esphome_build_cache.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/file_locations/github_repo.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/file_locations/outputs_directory__claude_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/file_locations/user_uploads__claude_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/hardware_projects/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/hardware_projects/3d_printer__ender_3___klipper_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/hardware_projects/android_head_unit__f-150_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/hardware_projects/dragon_guardian_multi-tier_architecture.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/hardware_projects/jetson_orin_nano_setup.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/notes.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/pinout_references/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/pinout_references/color-coded_wiring_guide.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/pinout_references/esp32-c3_super_mini_pinout.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/pinout_references/esp32-s3-cam_goouuu_pinout.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/quick_reference/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/quick_reference/esphome_commands.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/quick_reference/flash_esp32_to_recovery.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/quick_reference/generate_api_key.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/sensor_configurations/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/sensor_configurations/aht10__temp_humidity_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/sensor_configurations/als-pt19__ambient_light_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/sensor_configurations/bmp280__atmospheric_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/sensor_configurations/hlk-ld2420__mmwave_presence_.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/sister_s_jewelry_business/_meta.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "/Users/kevin/KVN_Coordinator_System/psychic-potato/MASTER/src/data/inventory_exploded/kvn_reference_inventory/sister_s_jewelry_business/up2you_kvn_ltd.json",
+      "valid": true,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

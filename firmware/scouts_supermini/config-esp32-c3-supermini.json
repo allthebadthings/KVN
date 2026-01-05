@@ -1,0 +1,29 @@
+{
+  "board": "ESP32-C3 SuperMini",
+  "assignments": {
+    "imported-mjdaq6x9-es2i_mjly7ad2": {
+      "uart-tx": "GPIO21",
+      "uart-rx": "GPIO20",
+      "5V": "5V",
+      "GND": "GND"
+    },
+    "imported-mjdaq6x9-9jbv_mjly7l3g": {
+      "i2c-sda": "GPIO8",
+      "i2c-scl": "GPIO9",
+      "3V3": "3V3",
+      "GND": "GND"
+    },
+    "imported-mjdaq6x9-25fy_mjly7zaz": {
+      "out-gpio": "GPIO2",
+      "3V3": "3V3",
+      "GND": "GND"
+    },
+    "new-component-mjlwgici_mjly835g": {
+      "GND": "GND",
+      "5V": "5V",
+      "SCL": "GPIO4",
+      "SDA": "GPIO3"
+    }
+  },
+  "timestamp": "2025-12-25T21:22:50.344Z"
+}

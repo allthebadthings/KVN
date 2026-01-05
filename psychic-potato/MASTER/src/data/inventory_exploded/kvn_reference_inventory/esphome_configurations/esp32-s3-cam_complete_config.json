@@ -1,0 +1,20 @@
+{
+  "name": "ESP32-S3-CAM Complete Config",
+  "type": "device_config",
+  "file": "esp32-s3-cam-complete.yaml",
+  "includes": [
+    "Camera (OV2640)",
+    "LD2420 presence",
+    "ILI9341 touch display",
+    "I2S audio (mic + speaker)",
+    "Light sensor",
+    "Full GPIO mapping"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 237.58791810978002
+  },
+  "last_updated": "2026-01-03T11:10:30.177Z",
+  "checksum": "04a60065fff689a7ae02d862c7a3723c"
+}

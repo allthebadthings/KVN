@@ -1,0 +1,18 @@
+{
+  "name": "Inventory Sync Server",
+  "type": "project",
+  "tech": "Node.js",
+  "port": "5001",
+  "features": [
+    "JSON database backend",
+    "Syncs with HTML frontend",
+    "REST API for CRUD operations"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 323.262164114031
+  },
+  "last_updated": "2026-01-03T11:10:30.176Z",
+  "checksum": "e30728e08c5a801a1d8f12b13a95d310"
+}

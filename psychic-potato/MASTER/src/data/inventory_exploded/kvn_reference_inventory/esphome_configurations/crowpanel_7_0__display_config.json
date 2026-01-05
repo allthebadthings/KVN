@@ -1,0 +1,19 @@
+{
+  "name": "CrowPanel 7.0\" Display Config",
+  "type": "device_config",
+  "board": "ESP32 with 800x480 RGB TFT",
+  "display": "rpi_dpi_rgb platform",
+  "touch": "GT911 capacitive",
+  "features": [
+    "Full touchscreen support",
+    "Backlight PWM control",
+    "Home Assistant integration"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 19.627898232700822
+  },
+  "last_updated": "2026-01-03T11:10:30.177Z",
+  "checksum": "5b645ea9f34a3d20b1542e11e5210d13"
+}

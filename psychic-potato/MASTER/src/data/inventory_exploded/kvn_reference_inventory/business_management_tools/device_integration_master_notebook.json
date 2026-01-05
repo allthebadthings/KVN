@@ -1,0 +1,23 @@
+{
+  "name": "Device Integration Master Notebook",
+  "type": "project",
+  "tech": "Jupyter",
+  "file": "device_integration_master.ipynb",
+  "features": [
+    "Inventory tracking with reorder alerts",
+    "Client/project management",
+    "Device catalog with camera presets",
+    "Auto-generate ESPHome YAML configs",
+    "BOM generation per device/project",
+    "Cost tracking",
+    "Excel export",
+    "Quick device lookup"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 98.60904785966244
+  },
+  "last_updated": "2026-01-03T11:10:30.176Z",
+  "checksum": "394489b09ff37275bc7a08bc7f994ed8"
+}

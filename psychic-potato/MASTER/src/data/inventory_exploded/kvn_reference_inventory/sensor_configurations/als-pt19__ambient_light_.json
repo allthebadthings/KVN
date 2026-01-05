@@ -1,0 +1,14 @@
+{
+  "name": "ALS-PT19 (Ambient Light)",
+  "type": "sensor",
+  "interface": "ADC (analog)",
+  "attenuation": "11db",
+  "update_interval": "10s",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 244.49675525197645
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "fd0f7f5501dcb30695fa775dd32b5cf1"
+}

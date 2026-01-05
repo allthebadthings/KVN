@@ -1,1 +1,24 @@
-examples/Complete_Sensor_System/secrets.h
+# Secrets
+firmware/secrets.h
+**/secrets.h
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Build artifacts
+build/
+*.o
+*.elf
+
+# Node
+node_modules/

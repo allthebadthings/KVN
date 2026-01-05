@@ -1,0 +1,13 @@
+{
+  "name": "BMP280 (Atmospheric)",
+  "type": "sensor",
+  "interface": "I2C",
+  "note": "Can be removed to free GPIO for displays",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 124.38638404391187
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "0b823619dd8d89cb5e20d9d78c680f09"
+}

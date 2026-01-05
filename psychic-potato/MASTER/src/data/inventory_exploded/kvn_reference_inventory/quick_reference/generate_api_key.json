@@ -1,0 +1,12 @@
+{
+  "name": "Generate API Key",
+  "type": "reference",
+  "command": "openssl rand -base64 32",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 222.87197470221537
+  },
+  "last_updated": "2026-01-03T11:10:30.180Z",
+  "checksum": "4645282a1250463a0c320078f8e5610c"
+}

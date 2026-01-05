@@ -1,0 +1,12 @@
+{
+  "name": "ESPHome Build Cache",
+  "path": "/Users/kevin/Documents/GitHub/ESPHome/config/.esphome/build/",
+  "type": "file_location",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 164.35964314715267
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "bb0d9bd8a2ca135b202e5b9ec701e40d"
+}

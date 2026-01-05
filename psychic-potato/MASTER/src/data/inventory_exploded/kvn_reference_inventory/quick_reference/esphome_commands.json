@@ -1,0 +1,19 @@
+{
+  "name": "ESPHome Commands",
+  "type": "reference",
+  "commands": [
+    "esphome config device.yaml",
+    "esphome compile device.yaml",
+    "esphome upload device.yaml --device /dev/cu.usbserial-XXX",
+    "esphome upload device.yaml --device 192.168.x.x",
+    "esphome logs device.yaml --device 192.168.x.x",
+    "esphome run device.yaml"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 358.10917234497884
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "8a9dbffcd4fc2c1a5e3c6b2be191568e"
+}

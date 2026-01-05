@@ -1,0 +1,20 @@
+{
+  "name": "3D Printer (Ender 3 + Klipper)",
+  "type": "hardware",
+  "board": "SKR Mini E3 V3.0",
+  "firmware": "Klipper on Raspberry Pi 3",
+  "probe": "BLTouch (5-wire)",
+  "configs": [
+    "Stepper direction fixes (X, Y inverted)",
+    "BLTouch z_offset calibration",
+    "Bed mesh leveling",
+    "PID tuning for heaters"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 292.5393466510921
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "e1a424c9ab4360f863ba94c4fabdf934"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "HLK-LD2420 (mmWave Presence)",
+  "type": "sensor",
+  "interface": "UART",
+  "baud": "115200 or 256000",
+  "pins": "OT1 = TX (sensor output), OT2 = RX (sensor input)",
+  "component": "ld2420",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 243.4504695320184
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "9060e25ced039501a4ec3394e85236d5"
+}

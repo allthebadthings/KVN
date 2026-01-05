@@ -1,0 +1,12 @@
+{
+  "name": "User Uploads (Claude)",
+  "path": "/mnt/user-data/uploads/",
+  "type": "file_location",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 159.51428386992126
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "beef90f53c196ac217d667e64cef8933"
+}

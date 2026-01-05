@@ -1,0 +1,17 @@
+{
+  "name": "Flash ESP32 to Recovery",
+  "type": "reference",
+  "steps": [
+    "Hold BOOT button",
+    "Connect USB",
+    "Release after 2 seconds",
+    "Verify: lsusb | grep -i espressif"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 78.63585980050316
+  },
+  "last_updated": "2026-01-03T11:10:30.180Z",
+  "checksum": "1a39f93a8e81e5c65f88d15440453730"
+}

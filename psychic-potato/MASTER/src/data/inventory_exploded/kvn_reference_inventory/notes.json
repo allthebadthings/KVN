@@ -1,0 +1,18 @@
+{
+  "name": "NOTES",
+  "type": "category",
+  "items": [
+    "Total reference devices: 50-70 ESPHome devices in home lab",
+    "Preferred approach: Local processing over cloud",
+    "Communication style: Direct, no BS, practical implementation",
+    "Hardware focus: ESP32-S3/C3/P4, Jetson, Raspberry Pi",
+    "Software stack: ESPHome, Home Assistant, Node.js, Python, React"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 285.2668928671057
+  },
+  "last_updated": "2026-01-03T11:10:30.180Z",
+  "checksum": "7af4eb0306cd8111e82ee1985df70eaf"
+}

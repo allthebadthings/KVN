@@ -1,0 +1,397 @@
+{
+  "name": "KDS Reference Inventory",
+  "type": "root",
+  "description": "Everything We've Built Together",
+  "children": [
+    {
+      "name": "BUSINESS MANAGEMENT TOOLS",
+      "type": "category",
+      "children": [
+        {
+          "name": "Dragon Guardian Dashboard",
+          "type": "project",
+          "tech": "HTML/React",
+          "description": "Unified client deployment management",
+          "features": [
+            "Client management (individual homes)",
+            "Device tracking pipeline: In Stock → Configured → Deployed → Active",
+            "Mobile-friendly responsive design",
+            "Auto-saves to localStorage",
+            "Quick stats dashboard"
+          ]
+        },
+        {
+          "name": "Device Integration Master Notebook",
+          "type": "project",
+          "tech": "Jupyter",
+          "file": "device_integration_master.ipynb",
+          "features": [
+            "Inventory tracking with reorder alerts",
+            "Client/project management",
+            "Device catalog with camera presets",
+            "Auto-generate ESPHome YAML configs",
+            "BOM generation per device/project",
+            "Cost tracking",
+            "Excel export",
+            "Quick device lookup"
+          ]
+        },
+        {
+          "name": "Business Tracker Notebook",
+          "type": "project",
+          "tech": "Jupyter",
+          "file": "business_tracker.ipynb",
+          "features": [
+            "Clients tracking",
+            "Devices/deployments",
+            "Projects with revenue tracking",
+            "Tasks with due dates",
+            "Payment status"
+          ]
+        },
+        {
+          "name": "ESP32 Device Tracker",
+          "type": "project",
+          "tech": "HTML",
+          "file": "esp32-device-tracker.html",
+          "features": [
+            "Add/categorize devices (Camera, Sensor, Light, etc.)",
+            "Anthropic API integration for doc generation",
+            "Auto-generate wiring diagrams per device",
+            "GPIO pin assignments",
+            "ESPHome YAML config generation",
+            "Component lists"
+          ]
+        },
+        {
+          "name": "Inventory Sync Server",
+          "type": "project",
+          "tech": "Node.js",
+          "port": "5001",
+          "features": [
+            "JSON database backend",
+            "Syncs with HTML frontend",
+            "REST API for CRUD operations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ESPHOME CONFIGURATIONS",
+      "type": "category",
+      "children": [
+        {
+          "name": "Master YAML Aggregator",
+          "type": "config",
+          "file": "master_config.yaml",
+          "purpose": "Shared config includes for all devices",
+          "contains": [
+            "WiFi secrets management",
+            "Multiple network fallbacks",
+            "API encryption keys",
+            "OTA passwords",
+            "Common boilerplate"
+          ]
+        },
+        {
+          "name": "secrets.yaml Template",
+          "type": "config",
+          "purpose": "Credential management",
+          "contains": [
+            "wifi_ssid / wifi_password",
+            "api_encryption_key",
+            "ota_password",
+            "fallback_ap_password"
+          ]
+        },
+        {
+          "name": "ESP32-CAM-Node-Display Config",
+          "type": "device_config",
+          "board": "GOOUUU ESP32-S3-CAM",
+          "sensors": [
+            "HLK-LD2420 presence sensor (UART)",
+            "ALS-PT19 light sensor (ADC)",
+            "AHT10 temperature/humidity (I2C)",
+            "OV2640/OV5640 camera"
+          ],
+          "display": "ILI9341 touchscreen (optional)",
+          "features": [
+            "Presence detection with moving/still targets",
+            "Environmental monitoring",
+            "Camera streaming",
+            "Status display"
+          ]
+        },
+        {
+          "name": "CrowPanel 7.0\" Display Config",
+          "type": "device_config",
+          "board": "ESP32 with 800x480 RGB TFT",
+          "display": "rpi_dpi_rgb platform",
+          "touch": "GT911 capacitive",
+          "features": [
+            "Full touchscreen support",
+            "Backlight PWM control",
+            "Home Assistant integration"
+          ]
+        },
+        {
+          "name": "ESP32-S3-CAM Complete Config",
+          "type": "device_config",
+          "file": "esp32-s3-cam-complete.yaml",
+          "includes": [
+            "Camera (OV2640)",
+            "LD2420 presence",
+            "ILI9341 touch display",
+            "I2S audio (mic + speaker)",
+            "Light sensor",
+            "Full GPIO mapping"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PINOUT REFERENCES",
+      "type": "category",
+      "children": [
+        {
+          "name": "ESP32-S3-CAM GOOUUU Pinout",
+          "type": "reference",
+          "pins": [
+            "Camera (OV2640): GPIO4-18, 25-27, 32, etc.",
+            "UART (LD2420): TX=GPIO1, RX=GPIO3 (or GPIO43/44)",
+            "I2C: SDA=GPIO2, SCL=GPIO42",
+            "ADC (light sensor): GPIO1",
+            "Status LED: GPIO4 (flash)"
+          ]
+        },
+        {
+          "name": "ESP32-C3 Super Mini Pinout",
+          "type": "reference",
+          "file": "esp32-c3-super-mini-pinout.csv",
+          "contains": [
+            "All GPIO assignments",
+            "ADC channels",
+            "SPI/I2C defaults",
+            "Strapping pins",
+            "Boot button (GPIO9)",
+            "Built-in LED (GPIO8)"
+          ]
+        },
+        {
+          "name": "Color-Coded Wiring Guide",
+          "type": "reference",
+          "colors": [
+            { "color": "RED", "usage": "VCC/Power" },
+            { "color": "BLACK", "usage": "GND" },
+            { "color": "GREEN", "usage": "UART" },
+            { "color": "BLUE", "usage": "I2C/Display" },
+            { "color": "YELLOW", "usage": "Audio/I2S" },
+            { "color": "PURPLE", "usage": "ADC/Analog" },
+            { "color": "BROWN", "usage": "SPI/Display" },
+            { "color": "WHITE", "usage": "Misc GPIO" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HARDWARE PROJECTS",
+      "type": "category",
+      "children": [
+        {
+          "name": "Dragon Guardian Multi-Tier Architecture",
+          "type": "architecture",
+          "structure": [
+            "Tier 1 (Endpoints): ESP32-C3, S3, P4+C6 as mesh sensors",
+            "Tier 2 (Controllers): RP2040 Pico as intermediate hubs",
+            "Tier 3 (Brains): Jetson Nano/Orin for AI processing",
+            "Tier 4 (Central): Home Assistant on Raspberry Pi"
+          ]
+        },
+        {
+          "name": "Jetson Orin Nano Setup",
+          "type": "setup",
+          "os": "JetPack 6.0/6.2",
+          "components": [
+            "CUDA 12.6.68",
+            "TensorRT 10.3.0.30",
+            "OpenCV (with CUDA rebuild needed)",
+            "Docker",
+            "Ollama (for local AI)"
+          ],
+          "storage": "Migrated to NVMe",
+          "models": ["Mistral", "Llama2"]
+        },
+        {
+          "name": "3D Printer (Ender 3 + Klipper)",
+          "type": "hardware",
+          "board": "SKR Mini E3 V3.0",
+          "firmware": "Klipper on Raspberry Pi 3",
+          "probe": "BLTouch (5-wire)",
+          "configs": [
+            "Stepper direction fixes (X, Y inverted)",
+            "BLTouch z_offset calibration",
+            "Bed mesh leveling",
+            "PID tuning for heaters"
+          ]
+        },
+        {
+          "name": "Android Head Unit (F-150)",
+          "type": "hardware",
+          "vehicle": "2001 Ford F-150",
+          "unit": "Pyniro 7\" (SKU: CLP-18)",
+          "features": [
+            "Android OS with app sideloading",
+            "Developer options enabled",
+            "CarPlay/Android Auto compatible",
+            "Wire harness adapters documented"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SISTER'S JEWELRY BUSINESS",
+      "type": "category",
+      "children": [
+        {
+          "name": "up2you.kvn.ltd",
+          "type": "business",
+          "stack": {
+            "Frontend": "React",
+            "Backend": "Node.js",
+            "Database": "Supabase (cloud)",
+            "Hosting": "Self-hosted"
+          },
+          "features": [
+            "Public storefront",
+            "Inventory management",
+            "Bundle creation (customer picks items)",
+            "Admin panel",
+            "Photo uploads",
+            "CSV export",
+            "Label printing"
+          ],
+          "deployment": [
+            "Nginx reverse proxy",
+            "PM2/systemd for backend",
+            "SSL/TLS via Let's Encrypt"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BRANDING & BUSINESS",
+      "type": "category",
+      "children": [
+        {
+          "name": "KVM Ltd (Umbrella)",
+          "type": "business_structure",
+          "subsidiaries": [
+            "KDS (Kevin Daryl Systems) - ESP32 integration",
+            "Sister's jewelry business",
+            "KVN - Kinetic Vector Network"
+          ]
+        },
+        {
+          "name": "KVN - Kinetic Vector Network",
+          "type": "brand",
+          "domain": "kvn.ltd",
+          "concept": "Empathic network - AI that cares",
+          "sub_brands": ["KVN Core", "KVN Home"],
+          "notes": "Dragon references retired, now using Draco/KVN"
+        },
+        {
+          "name": "Market Entry Strategy",
+          "type": "strategy",
+          "phases": [
+            { "phase": "Phase 1 (Weeks 1-4)", "focus": "Foundation", "details": ["Portfolio site", "Service packages defined", "Proof documentation"] },
+            { "phase": "Phase 2 (Weeks 5-12)", "focus": "First Clients", "details": ["50 conversations target", "Pilot pricing for testimonials", "Elder care / home health partnerships"] },
+            { "phase": "Phase 3 (Months 4-6)", "focus": "Systematize", "details": ["Hardware + install tiers: $2,500 / $5,000 / $8,000+", "Optional monitoring: $50-150/month", "Partner with home health agencies"] },
+            { "phase": "Phase 4 (Months 7-12)", "focus": "Scale", "details": ["Hire installation tech", "Expand service area", "Product line launches"] }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SENSOR CONFIGURATIONS",
+      "type": "category",
+      "children": [
+        {
+          "name": "HLK-LD2420 (mmWave Presence)",
+          "type": "sensor",
+          "interface": "UART",
+          "baud": "115200 or 256000",
+          "pins": "OT1 = TX (sensor output), OT2 = RX (sensor input)",
+          "component": "ld2420"
+        },
+        {
+          "name": "ALS-PT19 (Ambient Light)",
+          "type": "sensor",
+          "interface": "ADC (analog)",
+          "attenuation": "11db",
+          "update_interval": "10s"
+        },
+        {
+          "name": "AHT10 (Temp/Humidity)",
+          "type": "sensor",
+          "interface": "I2C",
+          "update_interval": "60s"
+        },
+        {
+          "name": "BMP280 (Atmospheric)",
+          "type": "sensor",
+          "interface": "I2C",
+          "note": "Can be removed to free GPIO for displays"
+        }
+      ]
+    },
+    {
+      "name": "FILE LOCATIONS",
+      "type": "category",
+      "children": [
+        { "name": "GitHub Repo", "path": "/Users/kevin/Documents/GitHub/ESPHome/config/" },
+        { "name": "ESPHome Build Cache", "path": "/Users/kevin/Documents/GitHub/ESPHome/config/.esphome/build/" },
+        { "name": "Outputs Directory (Claude)", "path": "/mnt/user-data/outputs/" },
+        { "name": "User Uploads (Claude)", "path": "/mnt/user-data/uploads/" }
+      ]
+    },
+    {
+      "name": "QUICK REFERENCE",
+      "type": "category",
+      "children": [
+        {
+          "name": "ESPHome Commands",
+          "type": "reference",
+          "commands": [
+            "esphome config device.yaml",
+            "esphome compile device.yaml",
+            "esphome upload device.yaml --device /dev/cu.usbserial-XXX",
+            "esphome upload device.yaml --device 192.168.x.x",
+            "esphome logs device.yaml --device 192.168.x.x",
+            "esphome run device.yaml"
+          ]
+        },
+        {
+          "name": "Generate API Key",
+          "type": "reference",
+          "command": "openssl rand -base64 32"
+        },
+        {
+          "name": "Flash ESP32 to Recovery",
+          "type": "reference",
+          "steps": ["Hold BOOT button", "Connect USB", "Release after 2 seconds", "Verify: lsusb | grep -i espressif"]
+        }
+      ]
+    },
+    {
+      "name": "NOTES",
+      "type": "category",
+      "items": [
+        "Total reference devices: 50-70 ESPHome devices in home lab",
+        "Preferred approach: Local processing over cloud",
+        "Communication style: Direct, no BS, practical implementation",
+        "Hardware focus: ESP32-S3/C3/P4, Jetson, Raspberry Pi",
+        "Software stack: ESPHome, Home Assistant, Node.js, Python, React"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "AHT10 (Temp/Humidity)",
+  "type": "sensor",
+  "interface": "I2C",
+  "update_interval": "60s",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 55.012242324176285
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "07e21c8d75a7f13834419fcce91d8309"
+}

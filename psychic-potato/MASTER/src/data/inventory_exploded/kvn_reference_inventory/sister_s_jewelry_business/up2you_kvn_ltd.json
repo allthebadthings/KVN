@@ -1,0 +1,31 @@
+{
+  "name": "up2you.kvn.ltd",
+  "type": "business",
+  "stack": {
+    "Frontend": "React",
+    "Backend": "Node.js",
+    "Database": "Supabase (cloud)",
+    "Hosting": "Self-hosted"
+  },
+  "features": [
+    "Public storefront",
+    "Inventory management",
+    "Bundle creation (customer picks items)",
+    "Admin panel",
+    "Photo uploads",
+    "CSV export",
+    "Label printing"
+  ],
+  "deployment": [
+    "Nginx reverse proxy",
+    "PM2/systemd for backend",
+    "SSL/TLS via Let's Encrypt"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 351.446496385168
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "0475ec7114752ddf762b2bd94c1430f8"
+}

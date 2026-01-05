@@ -1,0 +1,20 @@
+{
+  "name": "ESP32-C3 Super Mini Pinout",
+  "type": "reference",
+  "file": "esp32-c3-super-mini-pinout.csv",
+  "contains": [
+    "All GPIO assignments",
+    "ADC channels",
+    "SPI/I2C defaults",
+    "Strapping pins",
+    "Boot button (GPIO9)",
+    "Built-in LED (GPIO8)"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 307.17109677770515
+  },
+  "last_updated": "2026-01-03T11:10:30.177Z",
+  "checksum": "8ef66bd9bb0c9fc7f6242743236a173e"
+}

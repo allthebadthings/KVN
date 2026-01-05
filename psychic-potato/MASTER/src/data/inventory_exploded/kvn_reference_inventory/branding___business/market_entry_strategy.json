@@ -1,0 +1,49 @@
+{
+  "name": "Market Entry Strategy",
+  "type": "strategy",
+  "phases": [
+    {
+      "phase": "Phase 1 (Weeks 1-4)",
+      "focus": "Foundation",
+      "details": [
+        "Portfolio site",
+        "Service packages defined",
+        "Proof documentation"
+      ]
+    },
+    {
+      "phase": "Phase 2 (Weeks 5-12)",
+      "focus": "First Clients",
+      "details": [
+        "50 conversations target",
+        "Pilot pricing for testimonials",
+        "Elder care / home health partnerships"
+      ]
+    },
+    {
+      "phase": "Phase 3 (Months 4-6)",
+      "focus": "Systematize",
+      "details": [
+        "Hardware + install tiers: $2,500 / $5,000 / $8,000+",
+        "Optional monitoring: $50-150/month",
+        "Partner with home health agencies"
+      ]
+    },
+    {
+      "phase": "Phase 4 (Months 7-12)",
+      "focus": "Scale",
+      "details": [
+        "Hire installation tech",
+        "Expand service area",
+        "Product line launches"
+      ]
+    }
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 325.2795996460732
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "d06a953100d5df5139bfecb6896b6126"
+}

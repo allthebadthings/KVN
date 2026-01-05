@@ -1,0 +1,12 @@
+{
+  "name": "Outputs Directory (Claude)",
+  "path": "/mnt/user-data/outputs/",
+  "type": "file_location",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 71.53325407699589
+  },
+  "last_updated": "2026-01-03T11:10:30.179Z",
+  "checksum": "373221a3538353a055060553fbe688ba"
+}

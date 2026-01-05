@@ -1,0 +1,12 @@
+{
+  "name": "KVN Reference Inventory",
+  "type": "root",
+  "description": "Everything We've Built Together",
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 51.12372996676902
+  },
+  "last_updated": "2026-01-03T11:10:30.174Z",
+  "checksum": "e632b04b254f2d865c1f938d09561c33"
+}

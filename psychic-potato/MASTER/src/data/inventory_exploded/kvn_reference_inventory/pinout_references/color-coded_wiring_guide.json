@@ -1,0 +1,45 @@
+{
+  "name": "Color-Coded Wiring Guide",
+  "type": "reference",
+  "colors": [
+    {
+      "color": "RED",
+      "usage": "VCC/Power"
+    },
+    {
+      "color": "BLACK",
+      "usage": "GND"
+    },
+    {
+      "color": "GREEN",
+      "usage": "UART"
+    },
+    {
+      "color": "BLUE",
+      "usage": "I2C/Display"
+    },
+    {
+      "color": "YELLOW",
+      "usage": "Audio/I2S"
+    },
+    {
+      "color": "PURPLE",
+      "usage": "ADC/Analog"
+    },
+    {
+      "color": "BROWN",
+      "usage": "SPI/Display"
+    },
+    {
+      "color": "WHITE",
+      "usage": "Misc GPIO"
+    }
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 106.04867187947087
+  },
+  "last_updated": "2026-01-03T11:10:30.178Z",
+  "checksum": "2fbd3c230b7dbb9f5457081f650b03e6"
+}

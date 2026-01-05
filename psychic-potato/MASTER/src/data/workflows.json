@@ -1,0 +1,89 @@
+{
+  "workflows": [
+    {
+      "id": "wf-001",
+      "name": "Device Deployment Pipeline",
+      "description": "Standard lifecycle for Dragon Guardian devices",
+      "steps": [
+        { "id": "s1", "name": "In Stock", "next": "s2" },
+        { "id": "s2", "name": "Configured", "next": "s3" },
+        { "id": "s3", "name": "Deployed", "next": "s4" },
+        { "id": "s4", "name": "Active", "next": null }
+      ]
+    },
+    {
+      "id": "wf-002",
+      "name": "Client Onboarding",
+      "description": "New client setup process",
+      "steps": [
+        { "id": "c1", "name": "Initial Contact", "next": "c2" },
+        { "id": "c2", "name": "Service Agreement", "next": "c3" },
+        { "id": "c3", "name": "Device Setup", "next": "c4" },
+        { "id": "c4", "name": "Active Monitoring", "next": null }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "r1",
+      "name": "Standard Retention Policy",
+      "description": "Archive all active device data after 3 months",
+      "condition": "workflow.step == 'Active'",
+      "action": "ARCHIVE_DATA",
+      "params": { "duration": "90d" },
+      "category": "retention"
+    },
+    {
+      "id": "r2",
+      "name": "Compliance Retention Policy",
+      "description": "Must keep all active device logs for 1 year for audit",
+      "condition": "workflow.step == 'Active'",
+      "action": "RETAIN_DATA",
+      "params": { "duration": "365d" },
+      "category": "retention"
+    },
+    {
+      "id": "r3",
+      "name": "Deployment Notification (Admin)",
+      "description": "Notify admin when device is deployed",
+      "condition": "workflow.step == 'Deployed'",
+      "action": "SEND_EMAIL",
+      "params": { "to": "admin@kvn.ltd" },
+      "category": "notification"
+    },
+    {
+      "id": "r4",
+      "name": "Deployment Notification (Ops)",
+      "description": "Notify operations when device is deployed",
+      "condition": "workflow.step == 'Deployed'",
+      "action": "SEND_EMAIL",
+      "params": { "to": "ops@kvn.ltd" },
+      "category": "notification"
+    },
+    {
+      "id": "r5",
+      "name": "Legacy Logging",
+      "description": "Old file-based logging system",
+      "condition": "true",
+      "action": "WRITE_LOG",
+      "category": "logging",
+      "status": "obsolete"
+    },
+    {
+      "id": "r6",
+      "name": "Double Check Config",
+      "description": "Verify configuration before deployment",
+      "condition": "workflow.step == 'Configured'",
+      "action": "VALIDATE_CONFIG",
+      "category": "validation"
+    },
+    {
+      "id": "r7",
+      "name": "Verify Config Integrity",
+      "description": "Ensure config hash matches",
+      "condition": "workflow.step == 'Configured'",
+      "action": "VALIDATE_CONFIG",
+      "category": "validation"
+    }
+  ]
+}

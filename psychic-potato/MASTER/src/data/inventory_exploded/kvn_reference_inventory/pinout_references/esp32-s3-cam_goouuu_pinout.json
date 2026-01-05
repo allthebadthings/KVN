@@ -1,0 +1,18 @@
+{
+  "name": "ESP32-S3-CAM GOOUUU Pinout",
+  "type": "reference",
+  "pins": [
+    "Camera (OV2640): GPIO4-18, 25-27, 32, etc.",
+    "UART (LD2420): TX=GPIO1, RX=GPIO3 (or GPIO43/44)",
+    "I2C: SDA=GPIO2, SCL=GPIO42",
+    "ADC (light sensor): GPIO1",
+    "Status LED: GPIO4 (flash)"
+  ],
+  "visualization": {
+    "color": "#64748b",
+    "radius": 100,
+    "angle": 261.23969743236285
+  },
+  "last_updated": "2026-01-03T11:10:30.177Z",
+  "checksum": "f24fb2c83d76a7c6719402305267eb84"
+}
